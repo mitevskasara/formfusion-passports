@@ -66,7 +66,7 @@ declare module "@formfusion/passports" {
     [K in keyof T as K extends string ? Lowercase<K> : never]: T[K];
   };
 
-  type passports = LowercaseKeys<Passports>;
+  const passports: LowercaseKeys<Passports>;
 
   export = passports;
 }
