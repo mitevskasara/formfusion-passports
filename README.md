@@ -1,6 +1,6 @@
 # @formfusion/passports
 
-Set of validation rules for worldwide passport numbers, used for the [FormFusion](https://www.corelabui.com/formfusion) (form management & validation) library.
+Set of validation rules for worldwide passport numbers.
 
 A zero-dependency lookup table of **60 country-specific regex patterns** for validating passport numbers. Every value is a regex **string** (no `null`s, no empty placeholders) and works directly as an HTML [`pattern`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern) attribute value, so you can use it with plain HTML, React, FormFusion, or `new RegExp()`.
 
@@ -173,18 +173,6 @@ All source lives in [`src/index.js`](src/index.js) as a single object of upperca
 ```bash
 npm run build
 ```
-
-This repo has no tests and no CI. If you add a pattern, add a corresponding test in the [FormFusion](https://github.com/corelabui/formfusion) repo — its suite renders one `<Input>` per country with Jest + React Testing Library (see `src/__tests__/postalCodes/`, which contains a file per country).
-
-### Scripts
-
-| Script | Description |
-| --- | --- |
-| `npm run build` | Clean stale build output, then bundle `src/index.js` into `index.js` via esbuild |
-| `npm version <patch\|minor\|major>` | Bump the version and regenerate `CHANGELOG.md` from Conventional Commits (runs `npm run version` automatically) |
-| `npm run publish-package` | `npm publish --access public` |
-
-The `version` script shells out to `conventional-changelog`, which is not declared in `devDependencies`. Install it globally or add it as a dev dependency before running a version bump.
 
 ### Commit convention
 
